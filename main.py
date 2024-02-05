@@ -93,7 +93,6 @@ def generate_frames():
                 for _, cord in enumerate(point.landmark):
                     cord_x, cord_y = int(cord.x * width), int(cord.y * height)
                     points_list.append((cord_x, cord_y))
-                    cv2.putText(img, str(_), (cord_x, cord_y + 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
 
                 # Identificando a direção da mão (se está para direita ou esquerda)
                 right_hand = points_list[1][0] > points_list[0][0]
